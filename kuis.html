@@ -1,0 +1,157 @@
+//1
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kategori nilai pemrograman dasar</title>
+</head>
+
+<body>
+  <script>
+    var nilai = prompt("total nilai");
+    var grade = "";
+    if (nilai <= 100 && nilai >= 85) {
+      document.write("A");
+    } else if (nilai < 84 && nilai >= 70) {
+      document.write("B");
+    } else if (nilai < 69 && nilai >= 50) {
+      document.write("C");
+    } else if (nilai < 49 && nilai >= 30) {
+      document.write("D");
+    } else if (nilai < 29 && nilai >= 0) {
+      document.write("E");
+    } else {
+      document.write("Nilai salah");
+    }
+  </script>
+</body>
+
+</html>
+
+
+//2
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memberikan tahu usia</title>
+</head>
+
+<body>
+    <script>
+        var nilai = prompt("umur")
+        var grade = "";
+        if (nilai <= 12 && nilai >= 0) {
+            document.write("bocil");
+        } else if (nilai < 17 && nilai >= 13) {
+            document.write("ABG");
+        } else if (nilai < 59 && nilai >= 18) {
+            document.write("udah gede");
+        } else if (nilai >= 60) {
+            document.write("udah bau tanah");
+        }
+    </script>
+</body>
+
+</html>
+
+
+//3
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahun Kabisat</title>
+    <script>
+        function cekTahun() {
+            var tahun = document.getElementById("waktuInput").value;
+            var pesan;
+            tahun = parseInt(tahun);
+            if ((tahun % 4 === 0 && tahun % 100 !== 0) || (tahun % 400 === 0)) {
+                pesan = tahun + " tahun kabisat.";
+            } else {
+                pesan = tahun + " bukan tahun kabisat.";
+            }
+            document.getElementById("akhirnya").innerText = pesan;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Penentuan Tahun Kabisat</h1>
+    <label for="waktuInput">Masukkan tahun:</label>
+    <input type="number" id="waktuInput" required>
+    <button onclick="cekTahun()">Cek Tahun</button>
+    <p id="akhirnya"></p>
+</body>
+
+</html>
+
+
+//4
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>nilai pemoggraman java script</title>
+</head>
+
+<body>
+    <script>
+        var nilai = prompt("input nilai:");
+        if (nilai >= 75) {
+            document.write("<h2>Selamat Anda Lulus,hoki aja sih</h2>");
+        } else if (nilai <= 75) {
+            document.write("<p>Mohon Maaf Anda Tidak Lulus,makanya belajar yang bener</p>");
+        }
+
+        document.write("<p>Terima kasih sudah Menginput data di website kami,lain kali gak usah dateng lagi,bikin repot aja</p>");
+
+    </script>
+</body>
+
+</html>
+
+
+//5
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Gaji babu</title>
+    <script>
+        function hitungGaji() {
+            const gajiasli = 7000000;
+            const jamnormal = 40;
+            const gajiLemburPerJam = 100000;
+            const jamKerja = parseInt(document.getElementById("jamKerja").value);
+            let totalGaji;
+
+            if (jamKerja > jamnormal) {
+                const jamLembur = jamKerja - jamnormal;
+                const gajiLembur = jamLembur * gajiLemburPerJam;
+                totalGaji = gajiasli + gajiLembur;
+            } else {
+                totalGaji = gajiasli;
+            }
+            document.write(`<h2>Total gaji babu adalah: Rp. ${totalGaji.toLocaleString()}</h2>`);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Perhitungan Gaji babu</h1>
+    <label for="jamKerja">Masukkan jumlah jam kerja babu dalam seminggu:</label>
+    <input type="number" id="jamKerja" required>
+    <button onclick="hitungGaji()">Hitung Gaji</button>
+</body>
+
+</html>
